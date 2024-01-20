@@ -3,10 +3,10 @@ import { autowired, reflection } from 'first-di'
 import type { Movie } from '@/app/movie/domain/movie'
 import type { MovieInterface } from '@/app/movie/domain/movie.interface'
 
-import type { GetPopularMoviesByPageUseCase } from '@/app/movie/application/useCases/getPopularMoviesByPage.usecase'
+import type { GetPopularMoviesUsecase } from '@/app/movie/application/useCases/getPopularMovies.usecase'
 
 @reflection
-export class GetPopularMoviesByPageService implements GetPopularMoviesByPageUseCase {
+export class GetPopularMoviesService implements GetPopularMoviesUsecase {
   @autowired()
   private movie!: Movie
 
