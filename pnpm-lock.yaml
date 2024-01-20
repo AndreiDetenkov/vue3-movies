@@ -5,9 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  first-di:
+    specifier: ^1.0.20
+    version: 1.0.20(reflect-metadata@0.2.1)
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.3.3)(vue@3.4.13)
+  reflect-metadata:
+    specifier: ^0.2.1
+    version: 0.2.1
   vue:
     specifier: ^3.3.11
     version: 3.4.13(typescript@5.3.3)
@@ -29,7 +35,7 @@ devDependencies:
     specifier: ^21.1.6
     version: 21.1.6
   '@types/node':
-    specifier: ^18.19.3
+    specifier: ^18.19.6
     version: 18.19.6
   '@vitejs/plugin-vue':
     specifier: ^4.5.2
@@ -1754,6 +1760,14 @@ packages:
       path-exists: 4.0.0
     dev: true
 
+  /first-di@1.0.20(reflect-metadata@0.2.1):
+    resolution: {integrity: sha512-0OR6looKpm81em4Xd0MHgYCPhJpHh0/OX53SnwXrylrADUo8axH7fVW3PMK/DvgSRigiJoCWunCx/VK0uAl/gg==}
+    peerDependencies:
+      reflect-metadata: '>=0.1.0'
+    dependencies:
+      reflect-metadata: 0.2.1
+    dev: false
+
   /flat-cache@3.2.0:
     resolution: {integrity: sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -2840,6 +2854,10 @@ packages:
     dependencies:
       picomatch: 2.3.1
     dev: true
+
+  /reflect-metadata@0.2.1:
+    resolution: {integrity: sha512-i5lLI6iw9AU3Uu4szRNPPEkomnkjRTaVt9hy/bn5g/oSzekBSMeLZblcjP74AW0vBabqERLLIrz+gR8QYR54Tw==}
+    dev: false
 
   /require-from-string@2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
