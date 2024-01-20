@@ -11,6 +11,6 @@ export class GetPopularMoviesByPageService implements GetPopularMoviesByPageUseC
   private movie!: Movie
 
   execute(page: number = 1): Promise<MovieInterface[] | null> {
-    return this.movie.get(page)
+    return this.movie.getPopular(page)
   }
 }

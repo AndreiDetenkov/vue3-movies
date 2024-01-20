@@ -10,7 +10,11 @@ export class GetMoviesService implements Movie {
   @autowired()
   private getMoviesRepository!: GetMoviesRepository
 
-  get(page: number): Promise<MovieInterface[] | null> {
+  getPopular(page: number): Promise<MovieInterface[] | null> {
     return this.getMoviesRepository.getPopularMovies(page)
+  }
+
+  getTopRated(page: number): Promise<MovieInterface[] | null> {
+    return this.getMoviesRepository.getTopRatedMovies(page)
   }
 }
