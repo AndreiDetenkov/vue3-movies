@@ -3,5 +3,5 @@ import type { MovieInterface } from '@/app/movie/domain/movie.interface'
 
 @reflection
 export abstract class Movie {
-  abstract execute(page: number): Promise<MovieInterface[] | null>
+  abstract get(page: number): Promise<MovieInterface[] | null>
 }

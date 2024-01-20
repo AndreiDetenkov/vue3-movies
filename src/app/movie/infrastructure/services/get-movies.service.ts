@@ -8,7 +8,7 @@ export class GetMoviesService implements Movie {
   @autowired()
   private getMoviesRepository!: GetMoviesRepository
 
-  execute(page: number): Promise<MovieInterface[] | null> {
+  get(page: number): Promise<MovieInterface[] | null> {
     return this.getMoviesRepository.getPopularMovies(page)
   }
 }
