@@ -1,5 +1,7 @@
 import { reflection } from 'first-di'
+
 import type { MovieInterface } from '@/app/movie/domain/movie.interface'
+
 import { get } from '@/app/movie/infrastructure/clients/http'
 
 @reflection

@@ -1,4 +1,5 @@
 import { autowired } from 'first-di'
+
 import type { GetPopularMoviesByPageUseCase } from '@/app/movie/application/useCases/getPopularMoviesByPage.usecase'
 
 export class MoviesController {
