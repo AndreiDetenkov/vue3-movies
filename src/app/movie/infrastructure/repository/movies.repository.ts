@@ -21,13 +21,4 @@ export class MoviesRepository {
       return null
     }
   }
-
-  async getTopRatedMovies(page: number): Promise<MovieInterface[] | null> {
-    try {
-      const url = this.createUrl('top_rated', page)
-      return await get(url)
-    } catch (e) {
-      return null
-    }
-  }
 }

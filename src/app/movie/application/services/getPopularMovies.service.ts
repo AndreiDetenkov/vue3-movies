@@ -11,6 +11,6 @@ export class GetPopularMoviesService implements GetPopularMoviesUseCase {
   private movie!: Movie
 
   execute(page: number = 1): Promise<MovieInterface[] | null> {
-    return this.movie.getPopular(page)
+    return this.movie.get(page)
   }
 }
