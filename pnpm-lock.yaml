@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  first-di:
-    specifier: ^1.0.20
-    version: 1.0.20(reflect-metadata@0.2.1)
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.3.3)(vue@3.4.15)
@@ -2217,14 +2214,6 @@ packages:
     dependencies:
       semver-regex: 4.0.5
     dev: true
-
-  /first-di@1.0.20(reflect-metadata@0.2.1):
-    resolution: {integrity: sha512-0OR6looKpm81em4Xd0MHgYCPhJpHh0/OX53SnwXrylrADUo8axH7fVW3PMK/DvgSRigiJoCWunCx/VK0uAl/gg==}
-    peerDependencies:
-      reflect-metadata: '>=0.1.0'
-    dependencies:
-      reflect-metadata: 0.2.1
-    dev: false
 
   /flat-cache@3.2.0:
     resolution: {integrity: sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==}

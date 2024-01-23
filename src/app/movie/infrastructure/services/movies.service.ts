@@ -1,16 +1,11 @@
-import { autowired, reflection } from 'first-di'
+import { Movies } from '@/app/movie/domain/movies'
+import { MoviesRepository } from '@/app/movie/infrastructure/repository/movies.repository'
+import type { PaginationMovies } from '@/app/movie/domain/PaginationMovies'
 
-import type { Movie } from '@/app/movie/domain/movie'
-import type { MovieInterface } from '@/app/movie/domain/movie.interface'
-
-import type { MoviesRepository } from '@/app/movie/infrastructure/repository/movies.repository'
-
-@reflection
-export class MoviesService implements Movie {
-  @autowired()
+export class MoviesService implements Movies {
   private getMoviesRepository!: MoviesRepository
 
-  get(page: number): Promise<MovieInterface[] | null> {
-    return this.getMoviesRepository.getPopularMovies(page)
+  async getPopularMoviesList(pagination: PaginationMovies): Promise<unknown> {
+    return await this.getMoviesRepository.getPopularMovies(pagination.page)
   }
 }

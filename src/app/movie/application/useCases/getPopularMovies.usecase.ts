@@ -1,5 +1,5 @@
-import type { MovieInterface } from '@/app/movie/domain/movie.interface'
+import type { GetPopularMoviesQuery } from '@/app/movie/application/services/getPopularMovies.query'
 
 export abstract class GetPopularMoviesUseCase {
-  abstract execute(page: number): Promise<MovieInterface[] | null>
+  abstract execute(page: GetPopularMoviesQuery): Promise<unknown>
 }
