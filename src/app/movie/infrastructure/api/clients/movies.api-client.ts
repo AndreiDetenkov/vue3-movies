@@ -1,7 +1,5 @@
-import type { MovieInterface } from '@/app/movie/infrastructure/api/clients/movie.interface'
-
+import type { MovieInterface } from '@/app/movie/infrastructure/services/movie.interface'
 import { get } from '@/app/movie/infrastructure/api/http'
-import { container } from '@/app/di'
 
 export class MoviesApiClient {
   private readonly baseUrl = import.meta.env.VITE_BASE_URL
@@ -20,5 +18,3 @@ export class MoviesApiClient {
     }
   }
 }
-
-container.registerSingleton<MoviesApiClient>()

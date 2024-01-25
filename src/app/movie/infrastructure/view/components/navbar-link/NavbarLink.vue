@@ -12,7 +12,7 @@ defineProps<{
 <template>
   <router-link
     :to="item.url"
-    class="flex items-center justify-center text-center font-medium hover:text-orange-600 transition duration-300 ease-in-out"
+    class="flex items-center justify-center text-center font-medium transition duration-300 ease-in-out hover:text-orange-600"
     active-class="text-orange-500 border-b-orange-500"
   >
     {{ item.title }}

@@ -13,12 +13,12 @@ defineProps<{
     <img
       :src="`${IMG_URL}/t/p/w300${movie.poster_path}`"
       alt="poster image"
-      class="rounded-md mb-3"
+      class="mb-3 rounded-md"
     />
-    <p class="text-lg font-bold truncate mb-1 hover:underline">
+    <p class="mb-1 truncate text-lg font-bold hover:underline">
       {{ movie.title }}
     </p>
-    <p class="font-medium text-xs text-gray-500">{{ movie.release_date }} &#x2022;</p>
+    <p class="text-xs font-medium text-gray-500">{{ movie.release_date }} &#x2022;</p>
     <card-rate :rate="movie?.vote_average" />
   </div>
 </template>

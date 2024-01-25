@@ -13,7 +13,7 @@ const menu = computed<MenuInterface[]>(() => {
 <template>
   <nav class="border-b dark:border-b-gray-600">
     <div class="container mx-auto">
-      <div class="flex justify-between items-center h-12">
+      <div class="flex h-12 items-center justify-between">
         <div class="logo"><router-link to="/">Logo</router-link></div>
         <navbar-link v-for="item in menu" :key="item.title" :item="item" />
         <toggle-theme />
