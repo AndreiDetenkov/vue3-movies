@@ -1,8 +1,9 @@
-import type { MovieInterface } from '@/app/movie/infrastructure/repository/movie.interface'
+import type { MovieInterface } from '@/app/movie/infrastructure/api/clients/movie.interface'
 
-import { get } from '@/app/movie/infrastructure/clients/http'
+import { get } from '@/app/movie/infrastructure/api/http'
+import { container } from '@/app/di'
 
-export class MoviesRepository {
+export class MoviesApiClient {
   private readonly baseUrl = import.meta.env.VITE_BASE_URL
   private readonly apiKey = import.meta.env.VITE_API_KEY
 
@@ -19,3 +20,5 @@ export class MoviesRepository {
     }
   }
 }
+
+container.registerSingleton<MoviesApiClient>()

@@ -1,8 +1,8 @@
-import type { Movies } from '@/app/movie/domain/movies'
-import { PaginationMovies } from '@/app/movie/domain/PaginationMovies'
-
-import type { GetPopularMoviesUseCase } from '@/app/movie/application/useCases/getPopularMovies.usecase'
-import type { GetPopularMoviesQuery } from '@/app/movie/application/services/getPopularMovies.query'
+import { Movies } from '@/app/movie/domain/movies'
+import { PaginationMovies } from '@/app/movie/domain/paginationMovies'
+import { GetPopularMoviesUseCase } from '@/app/movie/application/useCases/getPopularMovies.usecase'
+import { GetPopularMoviesQuery } from '@/app/movie/application/services/getPopularMovies.query'
+import { container } from '@/app/di'
 
 export class GetPopularMoviesService implements GetPopularMoviesUseCase {
   private movies!: Movies
@@ -12,3 +12,5 @@ export class GetPopularMoviesService implements GetPopularMoviesUseCase {
     return this.movies.getPopularMoviesList(pagination)
   }
 }
+
+container.registerSingleton<GetPopularMoviesUseCase, GetPopularMoviesService>()
