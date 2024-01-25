@@ -2,8 +2,7 @@
   "name": "movies-app",
   "version": "0.0.0",
   "author": {
-    "name": "Andrei Detenkov",
-    "email": "a.detenkov@gmail.com"
+    "name": "Andrei Detenkov"
   },
   "private": true,
   "type": "module",
@@ -22,6 +21,7 @@
   },
   "dependencies": {
     "@wessberg/di": "^2.1.0",
+    "@wessberg/di-compiler": "^3.3.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"

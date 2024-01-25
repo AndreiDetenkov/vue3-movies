@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div
-    class="w-8 h-8 absolute bottom-14 -right-2 bg-orange-500 text-sm text-white font-bold rounded-full flex items-center justify-center"
+    class="absolute -right-2 bottom-14 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white"
   >
     {{ rate }}
   </div>

@@ -11,7 +11,7 @@ const capitalizedTitle = computed<string>(() => {
 </script>
 
 <template>
-  <h2 class="text-3xl text-gray-800 font-bold mb-8 pb-1 border-b border-b-gray-800">
+  <h2 class="mb-8 border-b border-b-gray-800 pb-1 text-3xl font-bold text-gray-800">
     {{ capitalizedTitle }}
   </h2>
 </template>
