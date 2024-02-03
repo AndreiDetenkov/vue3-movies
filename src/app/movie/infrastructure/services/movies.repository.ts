@@ -1,6 +1,6 @@
 import { Movies } from '@/app/movie/domain/movies'
 import { PaginationMovies } from '@/app/movie/domain/paginationMovies'
-import { MoviesApiClient } from '@/app/movie/infrastructure/api/clients/movies.api-client'
+import { MoviesApiClient } from '@/app/movie/infrastructure/api/clients/moviesApiClient'
 
 export class MoviesRepository implements Movies {
   constructor(private apiClient: MoviesApiClient) {}
