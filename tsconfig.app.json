@@ -1,10 +1,14 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
-  "exclude": ["src/**/__tests__/*"],
+  "exclude": ["src/**/__tests__/*", "node_modules/*", "dist/*"],
   "compilerOptions": {
-    "emitDecoratorMetadata": true,
+    "target": "es5",
+    "lib": ["es6"],
+    "types": ["reflect-metadata"],
+    "moduleResolution": "node",
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "composite": true,
     "noEmit": true,
     "baseUrl": ".",
