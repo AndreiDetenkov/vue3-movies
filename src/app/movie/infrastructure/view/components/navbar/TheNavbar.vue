@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 import NavbarLink from '../navbar-link/NavbarLink.vue'
-import ToggleTheme from '../toggle-theme/ToggleTheme.vue'
+import ToggleTheme from '@/app/shared/ui/toggle-theme/ToggleTheme.vue'
 import { type MenuInterface, web_route } from './types'
 
 const menu = computed<MenuInterface[]>(() => {
