@@ -6,8 +6,17 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      redirect: '/movies'
+    },
+    {
+      path: '/movies',
       name: 'movies',
       component: MoviesView
+    },
+    {
+      path: '/tv',
+      name: 'tv',
+      component: () => import('../../app/tv/infrastructure/view/tv-view.vue')
     }
   ]
 })

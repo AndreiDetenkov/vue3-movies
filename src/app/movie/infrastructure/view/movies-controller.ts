@@ -13,8 +13,4 @@ export class MoviesController {
   async getPopularMovies(page: number): Promise<Movie[]> {
     return await this.getPopularMoviesUseCase.execute({ page })
   }
-
-  // async getTopRatedMovies(page: number): Promise<MovieInterface[]> {
-  //   return this.moviesRepository.getPopularMoviesList(page)
-  // }
 }

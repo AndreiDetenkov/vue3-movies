@@ -15,6 +15,7 @@ export const useMoviesStore = defineStore('movies', {
 
   actions: {
     async getPopularMovies(page: number) {
+      console.log(deps.service)
       await deps.service.getPopularMovies(page)
     }
   }
