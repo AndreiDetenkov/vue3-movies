@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { IMG_URL } from '@/shared/config'
 import type { MovieInterface } from './types'
-import CardRate from '../rate/CardRate.vue'
+import CardRate from '@/app/movie/infrastructure/view/components/rate/CardRate.vue'
 
 defineProps<{
   movie: MovieInterface
