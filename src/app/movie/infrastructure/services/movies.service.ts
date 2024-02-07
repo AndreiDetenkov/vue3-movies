@@ -1,19 +1,23 @@
 import { inject, injectable } from 'tsyringe'
 import { TYPES } from '@/config/di/container.types'
-import type { MoviesRepositoryInterface } from '@/app/movie/infrastructure/services/movies.repository'
-import type { MovieInterface } from '@/app/movie/infrastructure/services/movie.interface'
+
+import { MoviesApiClient } from '@/app/movie/infrastructure/api/clients/movies-api-client'
+// import type { LoggerInterface } from '@/app/movie/infrastructure/services/logger.service'
+import type { MoviesProvider } from '@/app/movie/domain/movies-provider'
+import type { PaginationMovie } from '@/app/movie/domain/pagination-movie'
+import type { Movie } from '@/app/movie/domain/movie'
 
 @injectable()
-export class MoviesService {
+export class MoviesService implements MoviesProvider {
   constructor(
-    @inject(TYPES.MoviesRepository) private moviesRepository: MoviesRepositoryInterface
+    private moviesApiClient: MoviesApiClient
+    // @inject(TYPES.MoviesApiClient) private moviesApiClient: MoviesApiClient
+    // @inject(TYPES.Logger) private logger: LoggerInterface
   ) {}
 
-  async getPopularMovies(page: number): Promise<MovieInterface[]> {
-    return this.moviesRepository.getPopularMoviesList(page)
+  async getPopularMoviesList(pagination: PaginationMovie): Promise<Movie[]> {
+    const response = await this.moviesApiClient.getPopularMovies(pagination.page)
+    console.log('getPopularMoviesList', response)
+    return []
   }
-
-  // async getTopRatedMovies(page: number): Promise<MovieInterface[]> {
-  //   return this.moviesRepository.getPopularMoviesList(page)
-  // }
 }

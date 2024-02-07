@@ -1,6 +1,6 @@
-import type { PaginationMovies } from '@/app/movie/domain/pagination-movies'
-import type { MovieInterface } from '@/app/movie/infrastructure/services/movie.interface'
+import type { PaginationMovie } from '@/app/movie/domain/pagination-movie'
+import type { Movie } from '@/app/movie/domain/movie'
 
 export interface MoviesProvider {
-  getPopularMoviesList(pagination: PaginationMovies): Promise<MovieInterface[] | undefined>
+  getPopularMoviesList(pagination: PaginationMovie): Promise<Movie[]>
 }

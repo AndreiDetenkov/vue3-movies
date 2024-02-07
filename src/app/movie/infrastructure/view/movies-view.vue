@@ -13,7 +13,7 @@ const clickHandler = async () => {
 <template>
   <div class="container">
     <button class="rounded border px-8 py-3 hover:opacity-50" @click="clickHandler">
-      Get Movies
+      Get Popular Movies
     </button>
   </div>
 </template>
