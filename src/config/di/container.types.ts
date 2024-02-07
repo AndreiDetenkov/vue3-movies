@@ -1,6 +1,6 @@
 export const TYPES = {
   Logger: Symbol.for('Logger'),
-  GetPopularMoviesUseCase: Symbol.for('GetPopularMoviesUseCase'),
+  PopularMoviesUseCase: Symbol.for('PopularMoviesUseCase'),
   MoviesProvider: Symbol.for('MoviesProvider'),
   MoviesApiClient: Symbol.for('MoviesApiClient')
 }

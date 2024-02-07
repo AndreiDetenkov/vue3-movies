@@ -13,7 +13,7 @@ const menu = computed(() => {
 <template>
   <div class="container h-12">
     <nav class="flex h-full items-center justify-between">
-      <router-link to="/">Movies_app.</router-link>
+      <router-link to="/">Movies.</router-link>
 
       <div class="flex">
         <ul class="flex items-center gap-4">

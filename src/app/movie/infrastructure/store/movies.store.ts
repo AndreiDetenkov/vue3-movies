@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { container } from 'tsyringe'
 
-import { MoviesController } from '@/app/movie/infrastructure/view/movies-controller'
+import { MoviesController } from '@/app/movie/infrastructure/view/movies.controller'
 
 const deps = {
   get service() {
@@ -15,7 +15,6 @@ export const useMoviesStore = defineStore('movies', {
 
   actions: {
     async getPopularMovies(page: number) {
-      console.log(deps.service)
       await deps.service.getPopularMovies(page)
     }
   }
