@@ -1,4 +1,5 @@
 {
+  "tagFormat": "${version}",
   "branches": [{ "name": "master" }, { "name": "development", "prerelease": true }],
   "ci": false,
   "plugins": [
